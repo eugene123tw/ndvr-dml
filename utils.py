@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-
+from __future__ import division, print_function
 import numpy as np
 import pickle as pk
 import matplotlib.pylab as plt
@@ -93,7 +93,7 @@ def global_vector(video):
         return X
     except Exception as e:
         if video:
-            print 'Can\'t load feature file {}\n{}'.format(video, e.message)
+            print('Can\'t load feature file {}\n{}'.format(video, e.message))
         return np.array([])
 
 
